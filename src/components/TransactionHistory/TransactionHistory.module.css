@@ -1,0 +1,35 @@
+.transaction {
+  margin-top: 70px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 700px;
+  border: 1px solid rgba(102, 100, 190, 0.685);
+  border-radius: 5px;
+  box-shadow: 0 20px 30px rgba(45, 106, 197, 0.5),
+    0 15px 15px rgba(6, 13, 112, 0.4), 0 30px 50px rgba(118, 125, 221, 0.3);
+}
+
+.head {
+  background-color: rgb(14, 141, 245);
+  color: white;
+}
+
+.title {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-size: 24px;
+}
+
+.body {
+  text-align: center;
+}
+
+.text {
+  padding: 10px;
+  font-size: 18px;
+  color: gray;
+}
+
+.row:nth-child(even) {
+  background-color: rgba(188, 208, 245, 0.938);
+}
