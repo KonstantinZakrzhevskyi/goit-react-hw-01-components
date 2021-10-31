@@ -1,11 +1,8 @@
+import PropTypes from 'prop-types';
 export default function Statistics({ title, stats }) {
   return (
     <section className="statistics">
-      {title ? (
-        <h2 className="title">{title}</h2>
-      ) : (
-        <h2 className="title">{title}</h2>
-      )}
+      {title && <h2 className="title">{title}</h2>}
 
       <ul className="stat-list">
         {stats.map(stat => (
@@ -18,3 +15,14 @@ export default function Statistics({ title, stats }) {
     </section>
   );
 }
+
+Statistics.prototypes = {
+  title: PropTypes.string.isRequired,
+  stats: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.string.isRequired,
+      label: PropTypes.string.isRequired,
+      percentage: PropTypes.string.isRequired,
+    }),
+  ),
+};
